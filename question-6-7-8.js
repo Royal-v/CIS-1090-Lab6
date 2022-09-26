@@ -5,6 +5,7 @@ let dictionary = [
                 "water", "window", "xylophone", "yawl",
                 "yello", "zebra"
             ];
+console.log(dictionary.length)
 
 //❓❓ LAB QUESTION 8:
 //Search the array of words in the haystack parameter for the
@@ -12,7 +13,16 @@ let dictionary = [
 //a haystack?).
 //Return true when you find it, and false if you do not.
 function linearSearch(needle, haystack){
-    
+let i = 0
+while (i<= haystack.length){
+    if(needle == haystack[i]){
+        return true;
+    }
+    else if( i == haystack.length){
+        return false
+    }
+    else {i++}
+}
 }
 
 console.log("Does it contain cat? ", linearSearch("cat", dictionary));

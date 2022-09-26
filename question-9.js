@@ -39,7 +39,7 @@ function createIndexForDictionary(d){
 //Return true when you find it, and false if you do not.
 function indexSearch(needle, haystack, index){
 
-    //(your code here)
+    
 
 }
 
