@@ -38,12 +38,27 @@ function createIndexForDictionary(d){
 //index to speed up your search.
 //Return true when you find it, and false if you do not.
 function indexSearch(needle, haystack, index){
+i=index[getPositionInAlphabet(needle)];
+b = index[getPositionInAlphabet(needle)+1]
 
-    
+
+
+
+while (i<= haystack.length){
+    if(needle == haystack[i]){
+        return true;
+    }
+    else if( i == b){
+        return false
+    }
+    else {i++}
 
 }
-
+}
 let index = createIndexForDictionary(dictionary);
 console.log(indexSearch("public", dictionary, index));      //Should be true
 console.log(indexSearch("squanchy", dictionary, index));    //Should be false
 console.log(indexSearch("zyuganov", dictionary, index));    //Should be true
+
+
+
